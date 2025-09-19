@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<h2>Edit Student</h2>
+
+<form action="/students/<%= student.id %>/update" method="post" class="form">
+  <label>Name
+    <input type="text" name="name" value="<%= student.name %>" required />
+  </label>
+
+  <label>Age
+    <input type="number" name="age" min="1" value="<%= student.age %>" required />
+  </label>
+
+  <label>Course
+    <input type="text" name="course" value="<%= student.course %>" required />
+  </label>
+
+  <label>Email
+    <input type="email" name="email" value="<%= student.email %>" required />
+  </label>
+
+  <label>Gender
+    <select name="gender" required>
+      <option value="">Select</option>
+      <option value="Male" <% if (student.gender === 'Male') { %>selected<% } %>>Male</option>
+      <option value="Female" <% if (student.gender === 'Female') { %>selected<% } %>>Female</option>
+      <option value="Other" <% if (student.gender === 'Other') { %>selected<% } %>>Other</option>
+    </select>
+  </label>
+
+  <div>
+    <button class="btn">Update</button>
+    <a href="/" class="btn alt">Cancel</a>
+  </div>
+</form>
+
+<%- include('partials/footer') %>
