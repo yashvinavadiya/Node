@@ -34,14 +34,7 @@
         <label>Date</label>
         <input type="date" name="taskDate" required>
       </div>
-      <div class="form-group">
-        <label>Efficiency</label>
-        <select name="taskEfficiency">
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
-      </div>
+      
       <button type="submit">Add Task</button>
     </form>
 
@@ -58,7 +51,7 @@
             <th>Description</th>
             <th>Time</th>
             <th>Date</th>
-            <th>Efficiency</th>
+           
             <th>Actions</th>
           </tr>
         </thead>
@@ -70,7 +63,7 @@
               <td><%= task.taskDesc %></td>
               <td><%= task.taskTime %></td>
               <td><%= task.taskDate %></td>
-              <td><%= task.taskEfficiency %></td>
+           
               <td class="actions">
                 <a href="/editTask?id=<%= task.taskId %>" class="edit">Edit</a>
                 <a href="/deleteTask?id=<%= task.taskId %>" class="delete">Delete</a>

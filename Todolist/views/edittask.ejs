@@ -32,14 +32,7 @@
         <input type="date" name="taskDate" value="<%= task.taskDate %>" required>
       </div>
 
-      <div class="form-group">
-        <label>Efficiency</label>
-        <select name="taskEfficiency">
-          <option value="High" <%= task.taskEfficiency==="High" ? "selected" : "" %>>High</option>
-          <option value="Medium" <%= task.taskEfficiency==="Medium" ? "selected" : "" %>>Medium</option>
-          <option value="Low" <%= task.taskEfficiency==="Low" ? "selected" : "" %>>Low</option>
-        </select>
-      </div>
+   
 
       <button type="submit">Update Task</button>
     </form>

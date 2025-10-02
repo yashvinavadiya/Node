@@ -22,16 +22,18 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+margin: auto;
 }
 
 header {
-  text-align: center;
-  margin-bottom: 30px;
+  text-align: center; 
+  margin :auto
 }
 
 header h1 {
   font-size: 28px;
-  color: #34495e;
+  color: #1158a0;
+  margin-bottom: 6px;
 }
 
 h2 {
@@ -85,7 +87,7 @@ ul li a:hover {
 .task-form label {
   margin-bottom: 6px;
   font-weight: 600;
-  color: #34495e;
+  color: #682954;
 }
 
 .task-form input,
@@ -106,7 +108,7 @@ ul li a:hover {
 .task-form button {
   align-self: center;
   width: 50%;
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  background: linear-gradient(135deg, #588ed0, #2ecc71);
   color: #fff;
   padding: 12px 20px;
   border: none;
@@ -118,11 +120,11 @@ ul li a:hover {
 }
 
 .task-form button:hover {
-  background: linear-gradient(135deg, #219150, #27ae60);
+  background: linear-gradient(135deg, #0e4663, #27ae60);
   transform: translateY(-2px);
 }
 
-/* ========== Task Table ========== */
+
 .task-table {
   width: 100%;
   border-collapse: collapse;
@@ -163,7 +165,7 @@ ul li a:hover {
 
 
 .actions .edit {
-  background: #8e44ad; 
+  background: #c04888; 
   color: white;
 }
 
@@ -172,7 +174,7 @@ ul li a:hover {
 }
 
 .actions .delete {
-  background: #e67e22; 
+  background: #c9e622; 
   color: white;
 }
 
