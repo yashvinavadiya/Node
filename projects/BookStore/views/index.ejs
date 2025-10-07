@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Store</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>📚 Book Store</h1>
+  <a href="/add" class="btn">➕ Add Book</a>
+  <table>
+    <tr>
+      <th>Title</th><th>Author</th><th>Publisher</th><th>Genre</th><th>Price</th>
+      <th>Issue Date</th><th>Return Date</th><th>Student Name</th><th>Student ID</th><th>Actions</th>
+    </tr>
+    <% books.forEach(book => { %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td><%= book.publisher %></td>
+        <td><%= book.genre %></td>
+        <td><%= book.price %></td>
+        <td><%= book.issueDate ? book.issueDate.toDateString() : "" %></td>
+        <td><%= book.returnDate ? book.returnDate.toDateString() : "" %></td>
+        <td><%= book.studentName %></td>
+        <td><%= book.studentId %></td>
+        <td>
+          <a href="/edit/<%= book._id %>" class="btn">✏️ Edit</a>
+          <a href="/delete/<%= book._id %>" class="btn delete">🗑️ Delete</a>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

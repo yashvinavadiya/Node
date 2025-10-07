@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Book</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>➕ Add New Book</h1>
+  <form action="/add" method="POST">
+    <input type="text" name="title" placeholder="Book Title" required>
+    <input type="text" name="author" placeholder="Author" required>
+    <input type="text" name="publisher" placeholder="Publisher">
+    <input type="text" name="genre" placeholder="Genre">
+    <input type="number" name="price" placeholder="Price">
+
+    <label>Issue Date:</label>
+    <input type="date" name="issueDate">
+    <label>Return Date:</label>
+    <input type="date" name="returnDate">
+
+    <input type="text" name="studentName" placeholder="Issued To (Student Name)">
+    <input type="text" name="studentId" placeholder="Student ID">
+
+    <button type="submit" class="btn">Save</button>
+  </form>
+  <a href="/" class="btn">⬅️ Back</a>
+</body>
+</html>
