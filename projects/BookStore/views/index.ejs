@@ -2,15 +2,113 @@
 <html>
 <head>
   <title>Book Store</title>
-  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 8px 14px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 5px;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #217dbb;
+    }
+
+    .btn.delete {
+      background-color: #e74c3c;
+    }
+
+    .btn.delete:hover {
+      background-color: #c0392b;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f6fa;
+    }
+
+    tr:hover {
+      background-color: #e8f4fc;
+    }
+
+    td {
+      color: #2c3e50;
+      font-size: 15px;
+    }
+
+    a.btn {
+      margin: 2px;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 12px;
+      }
+      th, td {
+        padding: 8px;
+      }
+      .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <h1>📚 Book Store</h1>
+
   <a href="/add" class="btn">➕ Add Book</a>
+
   <table>
     <tr>
-      <th>Title</th><th>Author</th><th>Publisher</th><th>Genre</th><th>Price</th>
-      <th>Issue Date</th><th>Return Date</th><th>Student Name</th><th>Student ID</th><th>Actions</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Publisher</th>
+      <th>Genre</th>
+      <th>Price</th>
+      <th>Issue Date</th>
+      <th>Return Date</th>
+      <th>Student Name</th>
+      <th>Student ID</th>
+      <th>Actions</th>
     </tr>
     <% books.forEach(book => { %>
       <tr>
