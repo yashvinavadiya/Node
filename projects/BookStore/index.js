@@ -13,10 +13,11 @@ const __dirname = path.dirname(__filename);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
 app.set("view engine", "ejs");
 
 mongoose
-  .connect("mongodb+srv://bookuser:book123@cluster0.u8fl3cu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
+  .connect("mongodb+srv://book:book_123@cluster0.5yrqclh.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

@@ -10,9 +10,7 @@ const bookSchema = new mongoose.Schema({
   returnDate: Date,
   studentName: String,
   studentId: String,
-
-  // Optional ISBN, but won’t cause duplicate key error
-  isbn: { type: String, unique: true, sparse: true }
+  isbn: { type: String, unique: false } // ❌ Remove unique index
 });
 
 export default mongoose.model("Book", bookSchema);
