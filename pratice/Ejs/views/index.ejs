@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head') %>
+</head>
+
+<body>
+  <%- include('partials/nav') %>
+    <main>
+      <h1>Task Lists</h1>
+      <!--ADD Form-->
+      <form action="/add" method="POST">
+        <div>
+          <input type="text" name="title" id="" required>
+        </div>
+        <div>
+          <input type="date" name="dueDate" id="" value="" required>
+        </div>
+        <div>
+          <button type="submit">AddTask</button>
+        </div>
+      </form>
+      <!-- Table Task -->
+      <% if(tasks.length===0){ %>
+        <div>No Task Yet.</div>
+        <% } else { %>
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>DueDate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% tasks.forEach(t=> { %>
+                <tr>
+                  <td>
+                    <%= t.title %>
+                  </td>
+                  <td>
+                    <%= t.dueDate %>
+                  </td>
+                  <td><a href="/edit/<%= t.id %>">Edit</a></td>
+                  <td><a href="/delete/<%= t.id %>" onclick="return confirm('Sure to delete!')">Delete</a></td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <% } %>
+    </main>
+</body>
+
+</html>
