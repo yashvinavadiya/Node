@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Movie</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f6f8; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+  <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 350px; text-align: center;">
+    <h1 style="color: #333; margin-bottom: 20px;">🎬 Add New Movie</h1>
+
+    <form method="POST" action="/movies" style="display: flex; flex-direction: column; gap: 15px;">
+      <input type="text" name="title" placeholder="🎞️ Movie Title" required
+        style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+      
+      <input type="text" name="year" placeholder="Year"
+        style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+      
+      <input type="text" name="rating" placeholder=" Rating"
+        style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+      
+      <button type="submit"
+        style="background-color: #1976d2; color: white; border: none; padding: 10px; font-size: 16px; border-radius: 8px; cursor: pointer; transition: background 0.3s;">
+        Add Movie
+      </button>
+    </form>
+  </div>
+</body>
+</html>

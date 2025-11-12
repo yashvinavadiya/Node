@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+</head>
+<body style="font-family: 'Poppins', Arial, sans-serif;  height: 100vh; margin: 0; display: flex; justify-content: center; align-items: center;">
+
+  <div style="background: white; padding: 30px 40px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2); width: 80%; max-width: 900px;">
+    
+    <h1 style="text-align: center; color: #222; font-size: 28px; margin-bottom: 25px;">
+      Movies List
+    </h1>
+
+    <div style="text-align: right; margin-bottom: 15px;">
+      <a href="/movies/add" 
+         style="background-color: #43a047; color: white; text-decoration: none; padding: 10px 15px; border-radius: 8px; font-weight: 600; transition: 0.3s;">
+          Add Movie
+      </a>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+      <thead>
+        <tr style="background-color: #2575fc; color: white;">
+          <th style="padding: 12px;">Title</th>
+          <th style="padding: 12px;">Year</th>
+          <th style="padding: 12px;">Rating</th>
+          <th style="padding: 12px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% movies.forEach(movie => { %>
+          <tr style="text-align: center; border-bottom: 1px solid #ddd; background-color: #fafafa;">
+            <td style="padding: 10px; color: #333;"><%= movie.title %></td>
+            <td style="padding: 10px; color: #333;"><%= movie.year %></td>
+            <td style="padding: 10px; color: #333;"><%= movie.rating %></td>
+            <td style="padding: 10px;">
+              <a href="/movies/edit/<%= movie._id %>" 
+                 style="text-decoration: none; background-color: #1976d2; color: white; padding: 6px 10px; border-radius: 6px; margin-right: 6px; font-size: 14px;">
+                  Edit
+              </a>
+              <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE" style="display:inline;">
+                <button type="submit" 
+                        style="background-color: #e53935; color: white; border: none; padding: 6px 10px; border-radius: 6px; font-size: 14px; cursor: pointer;">
+                         Delete
+                </button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
